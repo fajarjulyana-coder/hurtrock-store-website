@@ -3059,6 +3059,7 @@ def admin_payment_config():
 @app.route('/admin/payment-config/create', methods=['GET', 'POST'])
 @login_required
 @admin_required
+@csrf.exempt
 def admin_create_payment_config():
     if request.method == 'POST':
         try:
